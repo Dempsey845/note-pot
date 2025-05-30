@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend for NotePot",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Dempsey845/note-pot/issues"
   },
-  "homepage": "https://github.com/Dempsey845/note-pot#readme"
+  "homepage": "https://github.com/Dempsey845/note-pot#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
 }
