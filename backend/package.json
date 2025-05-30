@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for NotePot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dempsey845/note-pot.git"
+  },
+  "author": "Dempsey Newton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dempsey845/note-pot/issues"
+  },
+  "homepage": "https://github.com/Dempsey845/note-pot#readme"
+}
