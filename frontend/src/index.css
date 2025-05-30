@@ -4,4 +4,20 @@
   h1 {
     @apply text-3xl font-bold;
   }
+
+  input {
+    @apply placeholder:text-gray-500/90 text-black px-3 py-2 transition duration-300 focus:outline-none focus:border-slate-400 hover:border-slate-300;
+  }
+
+  .title {
+    @apply text-2xl font-light text-gray-600;
+  }
+
+  .header-hover {
+    @apply hover:bg-gray-100 rounded-full p-2 cursor-pointer;
+  }
+
+  .header-hover-2 {
+    @apply hover:bg-gray-300 rounded-full p-2 cursor-pointer;
+  }
 }
