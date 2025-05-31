@@ -20,4 +20,12 @@
   .header-hover-2 {
     @apply hover:bg-gray-300 rounded-full p-2 cursor-pointer;
   }
+
+  .sidebar-hover {
+    @apply hover:bg-gray-100 rounded-full p-2 cursor-pointer;
+  }
+
+  .sidebar-hover-2 {
+    @apply hover:bg-gray-300 rounded-full p-2 cursor-pointer;
+  }
 }

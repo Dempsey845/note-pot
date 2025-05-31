@@ -6,7 +6,7 @@ import { RefreshIcon } from "../icons/RefreshIcon";
 import { ArrowBackIcon } from "../icons/ArrowBackIcon";
 import { SettingsIcon } from "../icons/SettingsIcon";
 
-function Header() {
+function Header({ setSidebarCollapsed }) {
   const [searchFocused, setSearchFocused] = useState(false);
 
   const [size, setSize] = useState({
@@ -39,7 +39,10 @@ function Header() {
         <div className="flex w-full gap-20">
           {!showCollapsedSearchBar && (
             <div className="flex items-center gap-2 px-2">
-              <div className="header-hover">
+              <div
+                onClick={() => setSidebarCollapsed()}
+                className="header-hover"
+              >
                 <MenuIcon width="2em" height="2em" />
               </div>
               <h1 className="title">NotePot</h1>
