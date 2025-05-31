@@ -6,9 +6,11 @@ import { RefreshIcon } from "../icons/RefreshIcon";
 import { ArrowBackIcon } from "../icons/ArrowBackIcon";
 import { SettingsIcon } from "../icons/SettingsIcon";
 import Button from "./Button";
+import { Spinner } from "./Spinner";
 
 function Header({ setSidebarCollapsed }) {
   const [searchFocused, setSearchFocused] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
   const [size, setSize] = useState({
     width: window.innerWidth,
@@ -33,6 +35,16 @@ function Header({ setSidebarCollapsed }) {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const handleRefresh = () => {
+    // TODO : Implement API calls here
+    // Delay for testing for now
+    if (refreshing) return;
+    console.log("Refreshing");
+    const stopRefreshing = () => setRefreshing(false);
+    setRefreshing(true);
+    setTimeout(stopRefreshing, 3000);
+  };
 
   return (
     <header>
@@ -92,9 +104,10 @@ function Header({ setSidebarCollapsed }) {
           )}
 
           <Button
-            width="1.5em"
-            height="1.5em"
-            icon={RefreshIcon}
+            onClick={handleRefresh}
+            width={refreshing ? "1.2em" : "1.5em"}
+            height={refreshing ? "1.2em" : "1.5em"}
+            icon={refreshing ? Spinner : RefreshIcon}
             info="Refresh"
           />
           <Button

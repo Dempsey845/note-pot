@@ -12,6 +12,7 @@ function Button(props) {
       } flex flex-col items-center justify-center ${
         !props.disabled && "hover"
       } relative`}
+      onClick={props?.onClick}
     >
       <props.icon width={props.width || "1em"} height={props.height || "1em"} />
       {hovered && (

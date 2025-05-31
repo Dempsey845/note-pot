@@ -58,15 +58,10 @@ function App() {
 
   const isNoteSelected = (note) => {
     const included = selectedNotes.includes(note);
-    console.log(included);
     return included;
   };
 
   const toggleSbCollapsed = () => setSidebarCollapsed(!sidebarCollapsed);
-
-  useEffect(() => {
-    console.log(selectedNotes);
-  }, [selectedNotes]);
 
   return (
     <div className="note-pot h-lvh">
@@ -94,7 +89,7 @@ function App() {
           {selectedNotes && (
             <motion.div
               layout
-              className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))]"
+              className="grid grid-cols-[repeat(auto-fit,minmax(200px,2fr))]"
             >
               <AnimatePresence>
                 {notes.map((note, index) => (
