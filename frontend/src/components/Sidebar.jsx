@@ -21,7 +21,7 @@ function Sidebar({ collapsed, setCollapsed }) {
       }}
       onMouseLeave={() => setCollapsed(true)}
       className={`h-full my-3 ${
-        collapsed && "mx-3"
+        collapsed ? "mx-3" : "shadow-2xl"
       } transition-all duration-300 ease-in-out ${collapsed ? "w-12" : "w-64"}`}
     >
       {options.map((option, index) => (

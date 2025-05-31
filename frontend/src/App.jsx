@@ -77,7 +77,7 @@ function App() {
           />
         </motion.div>
       )}
-      <div className="flex">
+      <div className="flex h-full">
         <Sidebar
           collapsed={sidebarCollapsed}
           setCollapsed={setSidebarCollapsed}
