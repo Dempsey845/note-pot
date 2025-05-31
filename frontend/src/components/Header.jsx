@@ -90,18 +90,19 @@ function Header({ setSidebarCollapsed }) {
               <SearchIcon width="1.5em" height="1.5em" />
             </div>
           )}
-          <div className="header-hover p-3">
-            <RefreshIcon width="1.5em" height="1.5em" />
-          </div>
+
           <Button
             width="1.5em"
             height="1.5em"
             icon={RefreshIcon}
             info="Refresh"
           />
-          <div className="header-hover">
-            <SettingsIcon width="1.5em" height="1.5em" />
-          </div>
+          <Button
+            width="1.5em"
+            height="1.5em"
+            icon={SettingsIcon}
+            info="Settings"
+          />
 
           <div className="header-hover">
             <div className="rounded-full w-8 h-8 overflow-hidden">

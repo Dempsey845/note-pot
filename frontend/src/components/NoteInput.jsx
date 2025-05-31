@@ -1,6 +1,7 @@
 import { use, useEffect, useState } from "react";
 import { FormatIcon } from "../icons/FormatIcon";
 import { ArchiveIcon } from "../icons/ArchiveIcon";
+import Button from "./Button";
 
 function NoteInput() {
   const [collapsed, setCollapsed] = useState(true);
@@ -43,15 +44,21 @@ function NoteInput() {
       {!collapsed && (
         <div className="hotbar flex justify-between px-2">
           <div className="flex">
-            <button
+            <Button
               disabled={!canFormat}
-              className={`p-2 ${canFormat ? "hover" : "button-disabled"}`}
-            >
-              <FormatIcon width="1em" height="1em" />
-            </button>
-            <button className={`p-2 hover`}>
-              <ArchiveIcon width="1.2em" height="1.2em" />
-            </button>
+              width="1em"
+              height="1em"
+              icon={FormatIcon}
+              info="Formatting Options"
+              className={`${canFormat ? "" : "button-disabled"} p-3`}
+            />
+
+            <Button
+              width="1.2em"
+              height="1.2em"
+              icon={ArchiveIcon}
+              info="Archive"
+            />
           </div>
           <button
             onClick={() => setCollapsed(true)}

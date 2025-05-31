@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import NoteInput from "./components/NoteInput";
-import { CheckCircleIcon } from "./icons/CheckCircleIcon";
 import { motion, AnimatePresence } from "framer-motion";
 import { SelectHeader } from "./components/SelectHeader";
+import { Note } from "./components/Note";
 
 const notes = [
   {
@@ -98,30 +98,12 @@ function App() {
             >
               <AnimatePresence>
                 {notes.map((note, index) => (
-                  <motion.div
-                    key={`note-${index}`}
-                    layout
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3 }}
-                    className={`relative transition-all duration-300 ease-in-out border max-w-55 max-h-100 my-2 ${
-                      isNoteSelected(note)
-                        ? "border-2 border-black "
-                        : "border-gray-200"
-                    } rounded-2xl py-3 pl-3 pr-5 hover:shadow-xl`}
-                  >
-                    <CheckCircleIcon
-                      onClick={() => addSelectedNote(note)}
-                      height="1.5em"
-                      width="1.5em"
-                      className="absolute -top-2 -left-2 z-100"
-                    />
-                    <div className="h-full overflow-hidden">
-                      <p className="text-lg font-bold pb-3">{note.title}</p>
-                      <p>{note.text}</p>
-                    </div>
-                  </motion.div>
+                  <Note
+                    index={index}
+                    note={note}
+                    addSelectedNote={addSelectedNote}
+                    isNoteSelected={isNoteSelected}
+                  />
                 ))}
               </AnimatePresence>
             </motion.div>
