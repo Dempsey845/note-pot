@@ -58,6 +58,7 @@ function Header({ setSidebarCollapsed }) {
               >
                 <MenuIcon width="2em" height="2em" />
               </div>
+              <img src="/NotePot.svg" className="w-8 h-8" />
               <h1 className="title">NotePot</h1>
             </div>
           )}
