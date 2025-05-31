@@ -5,6 +5,7 @@ import { SearchIcon } from "../icons/SearchIcon";
 import { RefreshIcon } from "../icons/RefreshIcon";
 import { ArrowBackIcon } from "../icons/ArrowBackIcon";
 import { SettingsIcon } from "../icons/SettingsIcon";
+import Button from "./Button";
 
 function Header({ setSidebarCollapsed }) {
   const [searchFocused, setSearchFocused] = useState(false);
@@ -92,7 +93,13 @@ function Header({ setSidebarCollapsed }) {
           <div className="header-hover p-3">
             <RefreshIcon width="1.5em" height="1.5em" />
           </div>
-          <div className="header-hover p-3">
+          <Button
+            width="1.5em"
+            height="1.5em"
+            icon={RefreshIcon}
+            info="Refresh"
+          />
+          <div className="header-hover">
             <SettingsIcon width="1.5em" height="1.5em" />
           </div>
 

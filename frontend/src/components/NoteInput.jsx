@@ -20,7 +20,7 @@ function NoteInput() {
   };
 
   return (
-    <div className="w-128 flex flex-col h-fit bg-white p-1 border border-gray-200 rounded-xl shadow-xl">
+    <div className="w-128 mb-10 flex flex-col h-fit bg-white p-1 border border-gray-200 rounded-xl shadow-xl">
       {!collapsed && (
         <input
           onInput={handleTitleInput}
